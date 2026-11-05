@@ -9,6 +9,7 @@
     duration: 1.05,
     smoothWheel: true,
   });
+  window.portfolioLenis = lenis;
 
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add(time => lenis.raf(time * 1000));

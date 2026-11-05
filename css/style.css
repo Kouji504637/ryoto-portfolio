@@ -335,3 +335,163 @@ h2 {
     background: #1e2530;
     transform: translateY(-4px);
   }
+
+/* Mobile portfolio menu: a calm, full-screen navigation panel */
+@media (max-width: 900px) {
+  .site-header.menu-active {
+    background: transparent;
+    border-bottom-color: transparent;
+    backdrop-filter: none;
+  }
+
+  .site-header .logo,
+  .site-header .hamburger {
+    position: relative;
+    z-index: 32;
+  }
+
+  .site-header #menu {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    max-height: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: max(112px, calc(env(safe-area-inset-top) + 92px)) 9vw max(56px, env(safe-area-inset-bottom));
+    overflow-y: auto;
+    list-style: none;
+    counter-reset: menu-item;
+    background: rgba(245, 244, 240, .99);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path .42s cubic-bezier(.76, 0, .24, 1), opacity .25s ease, visibility .42s;
+  }
+
+  .site-header #menu::before {
+    content: "MENU  /  NAVIGATION";
+    position: absolute;
+    top: max(68px, calc(env(safe-area-inset-top) + 48px));
+    left: 9vw;
+    color: #73746c;
+    font: 10px monospace;
+    letter-spacing: .14em;
+  }
+
+  .site-header #menu::after {
+    content: "RYOTO WATANABE  ·  PORTFOLIO";
+    position: absolute;
+    bottom: max(24px, env(safe-area-inset-bottom));
+    left: 9vw;
+    color: #73746c;
+    font: 9px monospace;
+    letter-spacing: .1em;
+  }
+
+  .site-header #menu.open {
+    display: flex;
+    align-items: stretch;
+    background: rgba(245, 244, 240, .99);
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+
+  .site-header #menu li {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #dbdad3;
+    counter-increment: menu-item;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity .28s ease, transform .35s ease;
+  }
+
+  .site-header #menu li:last-child {
+    border-bottom: 1px solid #dbdad3;
+  }
+
+  .site-header #menu.open li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .site-header #menu.open li:nth-child(1) { transition-delay: .06s; }
+  .site-header #menu.open li:nth-child(2) { transition-delay: .10s; }
+  .site-header #menu.open li:nth-child(3) { transition-delay: .14s; }
+  .site-header #menu.open li:nth-child(4) { transition-delay: .18s; }
+  .site-header #menu.open li:nth-child(5) { transition-delay: .22s; }
+
+  .site-header #menu li::before {
+    content: counter(menu-item, decimal-leading-zero);
+    width: 42px;
+    flex: 0 0 42px;
+    color: #85867d;
+    font: 10px monospace;
+  }
+
+  .site-header #menu li a,
+  .site-header #menu.open li a {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 62px;
+    padding: 12px 0;
+    border-radius: 0;
+    color: #272822;
+    font-family: "Yu Mincho", "Noto Serif JP", serif;
+    font-size: clamp(22px, 6vw, 29px);
+    letter-spacing: .04em;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .site-header #menu li a::after {
+    content: "↗";
+    color: #85867d;
+    font: 14px monospace;
+    transition: transform .2s ease, color .2s ease;
+  }
+
+  .site-header #menu li a:hover::after,
+  .site-header #menu li a:focus-visible::after {
+    color: #66714f;
+    transform: translate(3px, -3px);
+  }
+
+  .site-header .hamburger[aria-expanded="true"] span:first-child {
+    transform: translateY(3.75px) rotate(45deg);
+  }
+
+  .site-header .hamburger[aria-expanded="true"] span:last-child {
+    transform: translateY(-3.75px) rotate(-45deg);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: reduce) {
+  .site-header #menu,
+  .site-header #menu li,
+  .site-header #menu li a::after,
+  .site-header .hamburger span {
+    transition: none;
+  }
+}
