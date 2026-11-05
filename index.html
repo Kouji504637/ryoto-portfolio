@@ -42,5 +42,6 @@
   </main>
   <footer class="portfolio-footer"><div class="container"><a href="#top">渡邉 諒人</a><span>PORTFOLIO</span><small>© RYOTO WATANABE</small></div></footer><a class="portfolio-top" href="#top" aria-label="ページ上部へ">↑</a>
   <script>const h=document.querySelector('.hamburger'),m=document.querySelector('#menu');h.addEventListener('click',()=>{let o=h.getAttribute('aria-expanded')==='true';h.setAttribute('aria-expanded',String(!o));m.classList.toggle('open',!o)});m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{h.setAttribute('aria-expanded','false');m.classList.remove('open')}));const b=document.querySelector('.portfolio-top');window.addEventListener('scroll',()=>b.classList.toggle('visible',scrollY>300),{passive:true});</script>
-</body>
+<script src="js/portfolio-lightbox.js"></script></body>
 </html>
+
