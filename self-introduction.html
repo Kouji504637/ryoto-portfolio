@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeoPortfolio | 自己紹介</title>
+  <meta name="description" content="渡邉諒人の自己紹介ページ。プロフィール・スキル・連絡先。" />
+
+  <!-- Portと同じCSSを読み込む（統一） -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- ===== Header（共通） ===== -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">NeoPortfolio</a>
+      <button class="hamburger" aria-expanded="false" aria-label="メニュー">☰</button>
+      <ul id="menu">
+        
+        <li><a href="character.html">キャラクター</a></li>
+        <li><a href="trip.html">旅行</a></li>
+        <li><a href="Awards.html">受賞歴</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 自己紹介（Portと同じsection/container/cardの見た目で統一） -->
+    <section class="section">
+      <div class="container">
+        <div class="head"><h2>自己紹介</h2></div>
+
+        <div class="grid cols-3 ziko-grid">
+          <!-- プロフィール -->
+          <article class="card ziko-card">
+            <div class="card-inner">
+              <h3 class="ziko-title">プロフィール</h3>
+              <p class="ziko-text"><b>名前：</b>渡邉諒人</p>
+              <p class="ziko-text"><b>拠点：</b>Japan</p>
+              <p class="ziko-text"><b>興味：</b>デザイン / 車 / 音楽 / ドライブ</p>
+              <p class="ziko-text"><b>好き：</b>ダークでモダン、余白多め</p>
+            </div>
+          </article>
+
+          <!-- ひとこと -->
+          <article class="card ziko-card">
+            <div class="card-inner">
+              <h3 class="ziko-title">ひとこと</h3>
+              <p class="ziko-text">
+                シンプルだけど刺さる。<br />
+                使う人が迷わないUIを意識して作ってます。
+              </p>
+              <p class="ziko-quote">見た目だけじゃなく、使いやすさもセットで。</p>
+            </div>
+          </article>
+
+          <!-- 連絡先 -->
+          <article class="card ziko-card">
+            <div class="card-inner">
+              <h3 class="ziko-title">連絡先</h3>
+              <p class="ziko-text"><b>TikTok：</b>＠fin125</p>
+      </div>
+    </section>
+
+    <!-- スキル（Portのカード見た目で統一） -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="head"><h2>Skills</h2></div>
+
+        <div class="grid cols-3">
+          <article class="card">
+            <div class="card-inner">
+              <h3 class="ziko-title">Design</h3>
+              <p class="ziko-text">Photoshop / Illustrator</p>
+              <div class="ziko-bar"><span style="width:82%"></span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-inner">
+              <h3 class="ziko-title">Web</h3>
+              <p class="ziko-text">HTML / CSS / JavaScript</p>
+              <div class="ziko-bar"><span style="width:75%"></span></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-inner">
+              <h3 class="ziko-title">UI/UX</h3>
+              <p class="ziko-text">構成 / 余白 / 情報設計</p>
+              <div class="ziko-bar"><span style="width:78%"></span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+      <!-- Back to Top Button -->
+<a href="#top" class="back-to-top-btn" aria-label="Topへ戻る">
+    ▲
+  </a>
+  
+
+  </main>
+
+  <script>
+    // Portと同じハンバーガーJS（統一） :contentReference[oaicite:3]{index=3}
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('#menu');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('open');
+    });
+  </script>
+
+  <script>
+    const backToTop = document.querySelector('.back-to-top-btn');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.opacity = '1';
+        backToTop.style.pointerEvents = 'auto';
+      } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.pointerEvents = 'none';
+      }
+    });
+  </script>
+
+  
+</body>
+</html>

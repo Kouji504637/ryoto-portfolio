@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeoPortfolio | 旅行</title>
+  <meta name="description" content="旅行・風景・街の記録" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- header（ポートフォリオと完全共通） -->
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">NeoPortfolio</a>
+
+      <button class="hamburger" aria-expanded="false" aria-label="メニュー">☰</button>
+
+      <ul id="menu">
+        
+        <li><a href="character.html">キャラクター</a></li>
+        <li><a href="self-introduction.html">自己紹介</a></li>
+        <li><a href="Awards.html">受賞歴</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Travel Section -->
+  <section class="section">
+    <div class="container">
+      <div class="head">
+        <h2>旅行・風景</h2>
+        <p class="sub">訪れた場所の記録</p>
+      </div>
+
+      <div class="grid cols-3 travel-grid">
+
+        <article class="card travel-card">
+          <img src="imgmiyazaki/miyazaki (1).jpeg" alt="宮崎">
+          <img src="imgmiyazaki/miyazaki (2).jpeg" alt="宮崎">
+          <img src="imgmiyazaki/miyazaki (4).jpeg" alt="宮崎">
+          <div class="card-inner">
+            <h3>宮崎</h3>
+            <p>海と自然</p>
+          </div>
+        </article>
+
+        <article class="card travel-card">
+          <img src="imgsaga/arita (3).jpg" alt="佐賀">
+          <img src="imgsaga/karatu (2).jpg" alt="佐賀">
+          <img src="imgsaga/arita (4).jpg" alt="佐賀">
+          <div class="card-inner">
+            <h3>佐賀</h3>
+            <p>歴史とテーマパーク</p>
+          </div>
+        </article>
+
+        <article class="card travel-card">
+          <img src="imgsasebo/sasebo1 (1).jpg" alt="佐世保">
+          <img src="imgsasebo/sasebo1 (2).jpg" alt="佐世保">
+          <img src="imgsasebo/sasebo1 (4).jpg" alt="佐世保">
+          <div class="card-inner">
+            <h3>佐世保</h3>
+            <p>自然と静けさ</p>
+          </div>
+        </article>
+
+        <article class="card travel-card">
+          <img src="imgfakuoka/itosima.jpg" alt="糸島">
+          <div class="card-inner">
+            <h3>糸島</h3>
+            <p>白糸の滝と頂上からの景色</p>
+          </div>
+        </article>
+
+        <article class="card travel-card">
+          <img src="imgkumamoto/aso (1).jpg" alt="阿蘇">
+          <img src="imgkumamoto/aso (2).jpg" alt="阿蘇">
+          <img src="imgkumamoto/aso (3).jpg" alt="阿蘇">
+          <div class="card-inner">
+            <h3>阿蘇山</h3>
+            <p>阿蘇の火口</p>
+          </div>
+        </article>
+
+        <article class="card travel-card">
+          <img src="imgyamaguti/yamaguti1 (4).jpg" alt="山口">
+          <img src="imgyamaguti/yamaguti1 (5).jpg" alt="山口">
+          <img src="imgyamaguti/yamaguti1 (3).jpg" alt="山口">
+          <div class="card-inner">
+            <h3>角島</h3>
+            <p>角島サイコー</p>
+          </div>
+        </article>
+
+        <article class="card travel-card">
+          <img src="imgtoyo/sukai (1).jpg" alt="東京">
+          <img src="imgtoyo/sukai (2).jpg" alt="東京">
+          <img src="imgtoyo/sukai (3).jpg" alt="東京">
+          <div class="card-inner">
+            <h3>東京</h3>
+            <p>初東京</p>
+          </div>
+        </article>
+
+    </div>
+  </section>
+  
+          <!-- Back to Top Button -->
+<a href="#top" class="back-to-top-btn" aria-label="Topへ戻る">
+    ▲
+  </a>
+
+  <!-- footer（共通） -->
+  <footer class="footer">
+    <div class="container">
+      <p>© NeoPortfolio</p>
+    </div>
+  </footer>
+
+  <!-- hamburger -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('#menu');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('open');
+    });
+  </script>
+
+<script>
+    const backToTop = document.querySelector('.back-to-top-btn');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.opacity = '1';
+        backToTop.style.pointerEvents = 'auto';
+      } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.pointerEvents = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

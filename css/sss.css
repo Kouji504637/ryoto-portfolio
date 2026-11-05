@@ -1,0 +1,522 @@
+@charset "UTF-8";
+body {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding-top: 20px;
+    background: linear-gradient(-45deg,#1e272e,#2f3640,#353b48);
+    background-size: 400% 400%;
+    animation: bgMove 8s infinite alternate;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+#game-board {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #555;
+    margin: 40px 0;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+}
+
+#car {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 60px;
+    height: 30px;
+    background: #ff4757;
+    border-radius: 6px;
+    transition: transform 0.1s;
+}
+
+#car::after {
+    content: '🚗';
+    font-size: 28px;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+}
+
+#goal {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    width: 120px;
+    height: 100%;
+    background: rgba(46,213,115,0.3);
+    border-left: 4px dashed #2ed573;
+    border-right: 4px dashed #2ed573;
+}
+
+#speed-meter {
+    width: 300px;
+    height: 15px;
+    margin: 10px auto;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#speed-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg,#2ed573,#ffa502,#ff4757);
+}
+
+#message {
+    font-size: 28px;
+    margin-top: 15px;
+}
+
+#info {
+    margin: 10px;
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 18px;
+    background: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover {
+    background: #0652DD;
+}
+#game-board {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin: 40px 0;
+    background: linear-gradient(#444, #222);
+    transform: perspective(600px) rotateX(20deg);
+    transform-origin: bottom;
+    overflow: hidden;
+}
+#car {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(145deg,#ff6b81,#ff4757);
+    border-radius: 6px;
+    box-shadow: 
+        0 5px 0 #c0392b,
+        0 10px 20px rgba(0,0,0,0.4);
+    transition: transform 0.1s;
+}
+@keyframes bounceWin {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-20px); }
+    60% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+.win-effect {
+    animation: bounceWin 0.6s ease;
+}
+.road-lines {
+    position:absolute;
+    width:200%;
+    height:4px;
+    bottom:50px;
+    background: repeating-linear-gradient(
+        90deg,
+        white 0 40px,
+        transparent 40px 80px
+    );
+    animation: roadMove 1s linear infinite;
+}
+
+@keyframes roadMove {
+    from { transform: translateX(0); }
+    to { transform: translateX(-80px); }
+}
+#ranking {
+    width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+#ranking h2 {
+    margin: 0 0 10px;
+}
+
+#ranking-list {
+    list-style: none;
+    padding: 0;
+}
+
+#ranking-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.dark-mode {
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364);
+}
+
+.dark-mode #game-board {
+    background: linear-gradient(#111,#000);
+}
+
+.dark-mode #car {
+    background: linear-gradient(145deg,#00d2ff,#3a7bd5);
+}
+#start-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+#start-btn {
+    font-size: 24px;
+    padding: 15px 40px;
+    background:#e84118;
+    border:none;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+#traffic-light {
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:10px;
+}
+
+.light {
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#333;
+}
+
+.red.active { background:red; }
+.yellow.active { background:yellow; }
+.green.active { background:lime; }
+#start-screen {
+    z-index: 9999;
+}
+#traffic-light {
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    display:none; /* 最初は非表示 */
+    gap:10px;
+}
+
+.light {
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#333;
+}
+
+.red.active { background:red; }
+.yellow.active { background:yellow; }
+.green.active { background:lime; }
+.city {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    height: 120px;
+    background:
+        linear-gradient(to top, #111 60%, transparent 100%),
+        repeating-linear-gradient(
+            to right,
+            #222 0 40px,
+            #111 40px 80px
+        );
+    opacity: 0.8;
+}
+.stars {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+}
+.moon {
+    position: fixed;
+    top: 60px;
+    right: 80px;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #fff, #ddd);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(255,255,255,0.5);
+}
+#game-board {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin: 40px 0;
+    background:
+        linear-gradient(to bottom,#555,#222),
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,0.05) 0 20px,
+            transparent 20px 40px
+        );
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    transform: perspective(600px) rotateX(20deg);
+    transform-origin: bottom;
+    overflow: hidden;
+}
+.light-glow {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+    animation: moveGlow 8s linear infinite alternate;
+}
+
+@keyframes moveGlow {
+    from { transform: translateX(-100px); }
+    to { transform: translateX(100vw); }
+}
+.day-mode {
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+}
+
+.cloud {
+    position: absolute;
+    top: 40px;
+    width: 120px;
+    height: 50px;
+    background: white;
+    border-radius: 50px;
+    box-shadow:
+        30px 0 white,
+        60px 10px white,
+        20px 15px white;
+    opacity: 0.9;
+    animation: cloudMove 30s linear infinite;
+}
+
+@keyframes cloudMove {
+    from { transform: translateX(-200px); }
+    to { transform: translateX(110vw); }
+}
+.rain-drop {
+    position: fixed;
+    width: 2px;
+    height: 15px;
+    background: rgba(255,255,255,0.6);
+    animation: rainFall 0.7s linear infinite;
+}
+
+@keyframes rainFall {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(110vh); }
+}
+.fog {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent 70%);
+    pointer-events: none;
+    animation: fogMove 15s linear infinite alternate;
+}
+
+@keyframes fogMove {
+    from { transform: translateX(-50px); }
+    to { transform: translateX(50px); }
+}
+.other-car {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: yellow;
+    border-radius: 5px;
+    bottom: 30px;
+    animation: carPass 5s linear infinite;
+}
+
+@keyframes carPass {
+    from { transform: translateX(110vw); }
+    to { transform: translateX(-200px); }
+}
+#game-board::before {
+    content:"";
+    position:absolute;
+    bottom:40px;
+    width:200%;
+    height:4px;
+    background: repeating-linear-gradient(
+        90deg,
+        white 0 40px,
+        transparent 40px 80px
+    );
+    animation: roadMove 1s linear infinite;
+}
+.police-car {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(90deg, black 50%, white 50%);
+    border-radius: 5px;
+    bottom: 30px;
+    animation: policeMove 4s linear forwards;
+}
+
+@keyframes policeMove {
+    from { transform: translateX(110vw); }
+    to { transform: translateX(-200px); }
+}
+#fuel-bar-container {
+    width: 200px;
+    height: 15px;
+    margin: 10px auto;
+    background: #333;
+    border-radius: 10px;
+}
+
+#fuel-bar {
+    height: 100%;
+    width: 100%;
+    background: lime;
+    border-radius: 10px;
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+.game-wrapper {
+    margin-top: 120px;
+    position: relative;
+    z-index: 1;
+}
+.game-area {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  #ranking {
+    margin: 20px auto;
+    width: 300px;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .section {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .city,
+  .moon,
+  .light-glow,
+  .fog {
+    z-index: 0;
+  }
+  .site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 3000;
+  }
+  
+  .container.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .nav-menu li a:hover {
+    color: #00f2fe;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-menu {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: rgba(0,0,0,0.9);
+      flex-direction: column;
+      width: 200px;
+      padding: 20px;
+      display: none;
+    }
+  
+    .nav-menu.open {
+      display: flex;
+    }
+  }
+  
+  

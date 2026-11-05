@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="渡邉諒人の作品ポートフォリオ。地域や日常の題材から制作したグラフィック作品を紹介します。" />
+  <title>渡邉諒人｜作品ポートフォリオ</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    :root{--paper:#f5f4f0;--ink:#272822;--muted:#73746c;--line:#dbdad3;--olive:#aab38c}
+    html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP","Yu Gothic",sans-serif;line-height:1.75}a{color:inherit}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(245,244,240,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}.site-header .container{width:min(1160px,92vw)}.site-header .logo{color:var(--ink);font-size:15px;text-decoration:none}.site-header .logo small{font:9px monospace;color:var(--muted);margin-left:10px;letter-spacing:.12em}.site-header #menu{align-items:center}.site-header #menu a{font-size:11px;color:#55564f;text-decoration:none}.site-header #menu a:hover{background:transparent;color:#85916a}.site-header .hamburger{color:var(--ink)}
+    .project-intro{width:min(1000px,86vw);margin:auto;padding:74px 0 60px}.eyebrow{font:10px monospace;letter-spacing:.14em;color:var(--muted);margin:0 0 18px}.project-intro h1{font-family:"Yu Mincho","Noto Serif JP",serif;font-size:clamp(34px,5vw,54px);font-weight:500;letter-spacing:.06em;line-height:1.5;margin:0 0 17px}.project-lead{font-size:12px;line-height:2.15;color:#63645d;max-width:690px;margin:0}.project-facts{display:grid;grid-template-columns:repeat(3,1fr);max-width:760px;margin:34px 0 0;border-block:1px solid var(--line)}.project-facts div{padding:13px 16px 14px 0}.project-facts div+div{border-left:1px solid var(--line);padding-left:18px}.project-facts dt{font-size:9px;color:var(--muted);letter-spacing:.08em}.project-facts dd{margin:5px 0 0;font-size:11px}.project-story{width:min(1000px,86vw);margin:0 auto 50px;padding:21px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:180px 1fr;gap:24px}.project-story h2{font-size:13px;font-weight:500;letter-spacing:.08em;margin:0;background:none;color:var(--ink)}.project-story p{font-size:11px;line-height:2;color:#686960;margin:0;max-width:680px}
+    #works{padding:55px 0 88px;background:#eeede8;border-top:1px solid var(--line)}#works .container{width:min(1160px,92vw)}#works .head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #cdccc5;padding-bottom:15px;margin-bottom:27px}#works .head p{font:9px monospace;letter-spacing:.14em;color:var(--muted);margin:0 0 5px}#works h2{font-family:"Yu Mincho","Noto Serif JP",serif;font-weight:500;font-size:25px;color:var(--ink);margin:0;background:none}#works .head span{font:9px monospace;color:var(--muted)}#works .grid{gap:30px 22px}#works .card{padding:0;background:transparent;border:0;border-radius:0;overflow:hidden;box-shadow:none;transition:transform .2s}#works .card:hover{transform:translateY(-3px);box-shadow:none}#works .card img{height:clamp(170px,21vw,245px);object-fit:cover;border-radius:0;transition:filter .25s}#works .card:hover img{filter:brightness(.96)}#works .card-inner{padding:10px 1px 0;color:var(--ink);font-family:"Yu Mincho","Noto Serif JP",serif;font-size:14px}#works .card-inner:before{content:"WORK / ";display:block;font:9px monospace;letter-spacing:.08em;color:var(--muted);margin-bottom:3px}
+    .portfolio-footer{background:#292a25;color:#efeee8;padding:22px 0}.portfolio-footer .container{width:min(1160px,92vw);display:flex;align-items:center;justify-content:space-between}.portfolio-footer a{font-size:11px;text-decoration:none}.portfolio-footer span,.portfolio-footer small{font:8px monospace;color:#b8b8ad;letter-spacing:.1em}.portfolio-top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#30312a;color:white;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}.portfolio-top.visible{opacity:1;pointer-events:auto}
+    @media(max-width:900px){.site-header #menu{background:#252720}.site-header #menu a{color:#f4f2ec}}
+    @media(max-width:600px){.project-intro{padding:48px 0 40px}.project-intro h1{font-size:35px}.project-lead{font-size:11px}.project-facts{grid-template-columns:1fr;margin-top:24px}.project-facts div,.project-facts div+div{padding:9px 0;border-left:0}.project-facts div+div{border-top:1px solid var(--line)}.project-story{grid-template-columns:1fr;gap:7px;margin-bottom:30px}.project-story p{font-size:10px}#works{padding:40px 0 65px}#works .grid{gap:20px 13px}#works .card img{height:clamp(140px,39vw,205px)}#works .card-inner{font-size:12px}#works h2{font-size:22px}.portfolio-footer .container{flex-wrap:wrap;gap:8px}.portfolio-footer small{width:100%;text-align:right}}
+  </style>
+</head>
+<body id="top">
+  <header class="site-header"><div class="container nav"><a href="index.html" class="logo">渡邉 諒人 <small>PORTFOLIO</small></a><button class="hamburger" aria-expanded="false" aria-label="メニュー"><span></span><span></span></button><ul id="menu"><li><a href="#works">作品</a></li><li><a href="character.html">キャラクター</a></li><li><a href="self-introduction.html">自己紹介</a></li><li><a href="trip.html">旅行</a></li><li><a href="Awards.html">受賞歴</a></li></ul></div></header>
+  <main>
+    <section class="project-intro"><p class="eyebrow">PORTFOLIO　/　RYOTO WATANABE</p><h1>作品ポートフォリオ</h1><p class="project-lead">地域や日常の中で見つけた題材を、グラフィックやビジュアルにまとめています。課題制作や自主制作を通して、伝えたい内容に合う見せ方を考えました。</p><dl class="project-facts"><div><dt>制作内容</dt><dd>グラフィック / ビジュアル</dd></div><div><dt>主な題材</dt><dd>地域・暮らし・旅</dd></div><div><dt>掲載作品</dt><dd>課題制作・自主制作</dd></div></dl></section>
+    <section class="project-story"><h2>制作について</h2><p>身近な場所やものを観察し、そこにある魅力を見つけて伝えることを意識しています。作品ごとに題材や目的が異なるため、内容に合わせて構成や表現を考えています。</p></section>
+    <section id="works"><div class="container"><div class="head"><div><p>WORKS / SELECTED</p><h2>作品一覧</h2></div><span>01 — 15</span></div><div class="grid cols-3">
+      <article class="card"><img src="img/saga.jpg" alt="佐賀観光地案内"><div class="card-inner">佐賀観光地案内</div></article>
+      <article class="card"><img src="img/ookawa.jpg" alt="大川をもっと身近に"><div class="card-inner">大川をもっと身近に</div></article>
+      <article class="card"><img src="img/kenten.jpg" alt="デザインとアイデアの展示"><div class="card-inner">デザインとアイデアの展示</div></article>
+      <article class="card"><img src="img/pan.jpg" alt="パン屋"><div class="card-inner">パン屋</div></article>
+      <article class="card"><img src="img/marubouro.jpg" alt="丸ぼうろ"><div class="card-inner">丸ぼうろ</div></article>
+      <article class="card"><img src="img/ri-hurextuto.jpg" alt="伊万里温泉"><div class="card-inner">伊万里温泉</div></article>
+      <article class="card"><img src="img/ri-hurextuto2.jpg" alt="伊万里温泉"><div class="card-inner">伊万里温泉</div></article>
+      <article class="card"><img src="img/sakuhinbosixyu.jpg" alt="大衆文学"><div class="card-inner">大衆文学</div></article>
+      <article class="card"><img src="img/seisixyainnbosixyuu🟠.jpg" alt="求人募集中課題"><div class="card-inner">求人募集中課題</div></article>
+      <article class="card"><img src="img/takuzixyoukarennda-.jpg" alt="卓上カレンダー"><div class="card-inner">卓上カレンダー</div></article>
+      <article class="card"><img src="img/tokiy.jpg" alt="東京"><div class="card-inner">東京</div></article>
+      <article class="card"><img src="img/toukixyou.jpg" alt="東京の風景"><div class="card-inner">東京の風景</div></article>
+      <article class="card"><img src="img/taku.jpg" alt="多久"><div class="card-inner">多久</div></article>
+      <article class="card"><img src="img/GeometriEchoes.jpg" alt="Geometri Echoes"><div class="card-inner">Geometri Echoes</div></article>
+      <article class="card"><img src="img/sutahuxtuhu.jpg" alt="スタッフ募集"><div class="card-inner">スタッフ募集</div></article>
+    </div></div></section>
+  </main>
+  <footer class="portfolio-footer"><div class="container"><a href="#top">渡邉 諒人</a><span>PORTFOLIO</span><small>© RYOTO WATANABE</small></div></footer><a class="portfolio-top" href="#top" aria-label="ページ上部へ">↑</a>
+  <script>const h=document.querySelector('.hamburger'),m=document.querySelector('#menu');h.addEventListener('click',()=>{let o=h.getAttribute('aria-expanded')==='true';h.setAttribute('aria-expanded',String(!o));m.classList.toggle('open',!o)});m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{h.setAttribute('aria-expanded','false');m.classList.remove('open')}));const b=document.querySelector('.portfolio-top');window.addEventListener('scroll',()=>b.classList.toggle('visible',scrollY>300),{passive:true});</script>
+</body>
+</html>

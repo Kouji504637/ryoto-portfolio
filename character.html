@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | キャラクター</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Header（共通） ===== -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">NeoPortfolio</a>
+
+    <button class="hamburger" aria-expanded="false" aria-label="メニュー">☰</button>
+
+    <ul id="menu" class="nav-menu">
+          
+      <li><a href="self-introduction.html">自己紹介</a></li>
+      <li><a href="trip.html">旅行</a></li>
+      <li><a href="Awards.html">受賞歴</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== Main ===== -->
+<main class="container page">
+
+  <section class="section">
+    <div class="head">
+      <h2>キャラクター作品</h2>
+      <p class="sub">オリジナルキャラクター・イラスト</p>
+    </div>
+
+    <!-- 作品グリッド -->
+    <div class="grid cols-3">
+
+      <!-- card -->
+      <article class="card work-card">
+        <div class="thumb">
+          <!-- ★ここに画像を置く -->
+          <img src="imgcharacter/kumo.jpg" alt="雲キャラ">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">雲キャラ</h3>
+        </div>
+      </article>
+
+      <article class="card work-card">
+        <div class="thumb">
+          <img src="img/ch.jpg" alt="猫イチゴ">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">猫イチゴ</h3>
+        </div>
+      </article>
+
+      <article class="card work-card">
+        <div class="thumb">
+          <img src="img/sample3.jpg" alt="作品タイトル03">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">作品タイトル 03</h3>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+        <!-- Back to Top Button -->
+<a href="#top" class="back-to-top-btn" aria-label="Topへ戻る">
+    ▲
+  </a>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© Portfolio</small>
+  </div>
+</footer>
+
+<!-- ===== Hamburger JS（共通） ===== -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('#menu');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+    menu.classList.toggle('open');
+  });
+</script>
+
+<script>
+    const backToTop = document.querySelector('.back-to-top-btn');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.opacity = '1';
+        backToTop.style.pointerEvents = 'auto';
+      } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.pointerEvents = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

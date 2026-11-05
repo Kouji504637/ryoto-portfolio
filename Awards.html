@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeoPortfolio | 受賞歴</title>
+  <meta name="description" content="渡邉諒人の自己紹介ページ。プロフィール・スキル・連絡先。" />
+
+  <!-- Portと同じCSSを読み込む（統一） -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- ===== Header（共通） ===== -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">NeoPortfolio</a>
+        <button class="hamburger" aria-expanded="false" aria-label="メニュー">☰</button>
+        <ul id="menu">
+          
+          <li><a href="character.html">キャラクター</a></li>
+          <li><a href="self-introduction.html">自己紹介</a></li>
+          <li><a href="trip.html">旅行</a></li>
+        </ul>
+      </div>
+    </header>
+
+<!-- Awards -->
+<section id="awards" class="section">
+    <div class="container">
+      <div class="head">
+        <h2>受賞歴</h2>
+      </div>
+  
+      <div class="grid cols-3">
+        
+            <p class="award-year">2025</p>
+            <h3 class="award-title">筑後</h3>
+            <p class="award-rank">入選</p>
+            <p class="award-desc">
+              幾何学や形状デザインが評価された
+            </p>
+            <div class="card-inner">GeometriEchoes</div>
+        </article>
+  
+        <article class="card">
+          <img src="img/GeometriEchoes.jpg" alt="ri-hurextuto">
+          <div class="card-inner">GeometriEchoes</div>
+        </article>
+
+          <!-- Back to Top Button -->
+<a href="#top" class="back-to-top-btn" aria-label="Topへ戻る">
+    ▲
+  </a>
+  
+
+   
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('#menu');
+  
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('open');
+    });
+  </script>
+  
+   <script>
+    const backToTop = document.querySelector('.back-to-top-btn');
+  
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.opacity = '1';
+        backToTop.style.pointerEvents = 'auto';
+      } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.pointerEvents = 'none';
+      }
+    });
+  </script>
+  
+  </body>
+  </html>
+  
