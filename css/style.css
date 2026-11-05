@@ -74,6 +74,73 @@ header {
   border: none;
 }
 
+/* Portfolio navigation button and mobile dropdown */
+.site-header .nav {
+  position: relative;
+}
+
+.site-header .hamburger {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  padding: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.site-header .hamburger span {
+  display: block;
+  width: 21px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform .22s ease;
+}
+
+@media (max-width: 900px) {
+  .site-header .hamburger {
+    display: flex;
+  }
+
+  .site-header #menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 25;
+    width: min(320px, 92vw);
+    padding: 9px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 12px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, .18);
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .site-header #menu.open {
+    display: flex;
+  }
+
+  .site-header #menu li a {
+    display: block;
+    padding: 11px 13px;
+    border-radius: 7px;
+  }
+
+  .site-header .hamburger[aria-expanded="true"] span:first-child {
+    transform: translateY(3.75px) rotate(45deg);
+  }
+
+  .site-header .hamburger[aria-expanded="true"] span:last-child {
+    transform: translateY(-3.75px) rotate(-45deg);
+  }
+}
+
 /* セクション共通 */
 .section {
   padding-top: 100px;
