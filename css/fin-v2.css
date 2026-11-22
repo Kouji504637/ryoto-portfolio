@@ -14,3 +14,31 @@
 @media(max-width:680px){.container{width:calc(100% - 36px)}.header-inner{min-height:68px}.desktop-nav{display:none}.menu-button{display:flex}.site-logo>span{font-size:17px}.home-intro{grid-template-columns:1fr;padding:54px 0 70px;gap:43px}.home-intro-text h1{font-size:clamp(30px,8vw,43px);margin:20px 0}.home-lead{font-size:15px}.home-visual img{aspect-ratio:4/3}.home-visual figcaption{font-size:9px}.works-section{padding:64px 0}.section-heading{display:block;margin-bottom:25px}.section-heading h2{font-size:30px}.section-heading>p{margin-top:17px;font-size:11px}.work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:31px 13px}.work-meta{gap:8px}.work-meta h3{font-size:12px}.work-card>p{margin-left:0}.about-teaser{padding:67px 0}.teaser-layout{grid-template-columns:1fr;gap:25px}.other-pages{padding:68px 0}.page-tiles{gap:12px}.page-tiles span{font-size:11px}.sub-intro{padding:61px 0 43px}.sub-intro h1{font-size:35px}.content-section{padding:49px 0 70px}.story-row{grid-template-columns:1fr;gap:20px}.story-row h2{font-size:21px}.travel-grid{grid-template-columns:1fr;gap:35px}.award-grid{grid-template-columns:1fr;gap:40px}.award-art{max-width:500px}.dialog-body{gap:5px}.dialog-arrow{width:33px;height:36px}.dialog-body img{max-width:calc(100vw - 112px)}}
 @media(max-width:440px){.work-grid{grid-template-columns:1fr;gap:35px}.work-card>.image-button{aspect-ratio:4/3}.work-meta h3{font-size:14px}.work-card>p{margin-left:24px}.page-tiles{grid-template-columns:1fr}.page-tiles img{aspect-ratio:2/1}.two-grid{grid-template-columns:1fr}.footer-top{align-items:baseline}.footer-name{font-size:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+
+/* Two website projects, presented as typography-led covers rather than screenshots. */
+.web-works{margin-bottom:66px}
+.work-category-heading{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-bottom:1px solid #cdd1c8;padding-bottom:14px;margin-bottom:22px}
+.work-category-heading h3{font:normal 23px/1.5 var(--serif);letter-spacing:.04em}
+.work-category-heading>span{font-size:11px;letter-spacing:.04em;color:#777c75}
+.work-category-heading--graphic{margin-bottom:26px}
+.web-project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}
+.web-project{min-width:0}
+.web-project-link{display:block;min-width:0}
+.web-project-cover{aspect-ratio:16/9;display:flex;flex-direction:column;justify-content:space-between;padding:24px 30px;position:relative;overflow:hidden;isolation:isolate;transition:filter .25s ease}
+.web-project-link:hover .web-project-cover{filter:brightness(.96)}
+.web-project-cover--komorebi{background:#dee4d7;color:#405a4a}
+.web-project-cover--aethelgard{background:#e0e6e8;color:#40525c}
+.web-project-cover:after{content:"";position:absolute;inset:18px;border:1px solid currentColor;opacity:.25;pointer-events:none}
+.web-cover-caption,.web-cover-foot{font-size:10px;letter-spacing:.15em;line-height:1.5;position:relative;z-index:1}
+.web-cover-foot{text-align:right}
+.web-cover-title{position:relative;z-index:1;text-align:center;margin:12px 0}
+.web-cover-title>span{display:block;font:normal clamp(22px,3.2vw,42px)/1.25 var(--serif);letter-spacing:.05em;overflow-wrap:anywhere}
+.web-cover-title small{display:block;font:normal clamp(12px,1.5vw,19px)/1.6 var(--serif);letter-spacing:.12em;margin-top:4px}
+.web-project .work-meta{margin-top:15px}
+.web-project .work-meta h3{font-size:16px}
+.web-project p{font-size:11px;color:#777a74;margin:8px 0 10px 27px}
+.web-project-visit{display:inline-block;margin-left:27px;font-size:12px;color:#4d674f;border-bottom:1px solid #a5b3a5;padding-bottom:3px}
+.web-project-link:hover .web-project-visit{color:#2f5133;border-bottom-color:#2f5133}
+@media(max-width:680px){.web-works{margin-bottom:48px}.web-project-grid{gap:14px}.web-project-cover{padding:15px 17px}.web-project-cover:after{inset:10px}.web-cover-caption,.web-cover-foot{font-size:8px}.web-cover-title>span{font-size:clamp(17px,4vw,28px)}.web-cover-title small{font-size:11px}.web-project .work-meta h3{font-size:13px}.web-project p,.web-project-visit{margin-left:0}.work-category-heading h3{font-size:20px}}
+@media(max-width:480px){.web-project-grid{grid-template-columns:1fr;gap:32px}.web-project-cover{padding:20px}.web-cover-title>span{font-size:clamp(25px,8vw,40px)}.web-cover-title small{font-size:15px}.web-project .work-meta h3{font-size:15px}}
